@@ -15,6 +15,7 @@ class CreateItemTable extends Migration
     {
         Schema::create("item", function (Blueprint $table) {
             $table->bigIncrements("id");
+            $table->string("name");
             $table->string("type");
             $table->integer("max_sockets");
             $table->json("requirements");

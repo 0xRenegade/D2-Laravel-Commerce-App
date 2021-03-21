@@ -13,9 +13,9 @@ class CreateStatsTable extends Migration
      */
     public function up()
     {
-        Schema::create('stats', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create("stats", function (Blueprint $table) {
+            $table->bigIncrements("id");
+            $table->array("stats");
         });
     }
 
@@ -26,6 +26,6 @@ class CreateStatsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('stats');
+        Schema::dropIfExists("stats");
     }
 }

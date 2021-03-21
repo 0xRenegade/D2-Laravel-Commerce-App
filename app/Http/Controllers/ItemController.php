@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Stats;
+use App\Models\Item;
 use Illuminate\Http\Request;
 
-class StatsController extends Controller
+class ItemController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,6 +14,6 @@ class StatsController extends Controller
      */
     public function index()
     {
-        return response()->json(Stats::all()->jsonSerialize());
+        return response()->json(Item::all()->jsonSerialize());
     }
 }

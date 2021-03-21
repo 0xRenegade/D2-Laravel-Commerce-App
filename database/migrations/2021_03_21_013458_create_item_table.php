@@ -19,6 +19,7 @@ class CreateItemTable extends Migration
             $table->string("type");
             $table->integer("max_sockets");
             $table->json("requirements");
+            $table->integer("durability");
             $table->json("stats");
             $table->json("set_bonuses");
             $table->integar("quantity");

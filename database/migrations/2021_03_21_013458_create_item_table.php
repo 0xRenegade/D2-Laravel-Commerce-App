@@ -15,7 +15,12 @@ class CreateItemTable extends Migration
     {
         Schema::create("item", function (Blueprint $table) {
             $table->bigIncrements("id");
+            $table->string("type");
+            $table->integer("max_sockets");
+            $table->json("requirements");
             $table->json("stats");
+            $table->json("set_bonuses");
+            $table->integar("quantity");
             $table->decimal("price");
         });
     }
@@ -27,6 +32,6 @@ class CreateItemTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists("stats");
+        Schema::dropIfExists("item");
     }
 }

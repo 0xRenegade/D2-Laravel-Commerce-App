@@ -13,7 +13,7 @@ class CreateStatsTable extends Migration
      */
     public function up()
     {
-        Schema::create("stats", function (Blueprint $table) {
+        Schema::create("item", function (Blueprint $table) {
             $table->bigIncrements("id");
             $table->array("stats");
         });

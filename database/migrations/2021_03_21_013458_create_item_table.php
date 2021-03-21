@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStatsTable extends Migration
+class CreateItemTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,7 +15,7 @@ class CreateStatsTable extends Migration
     {
         Schema::create("item", function (Blueprint $table) {
             $table->bigIncrements("id");
-            $table->array("stats");
+            $table->json("stats");
             $table->decimal("price");
         });
     }

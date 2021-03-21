@@ -17,6 +17,7 @@ class CreateItemTable extends Migration
             $table->bigIncrements("id");
             $table->string("name");
             $table->string("type");
+            $table->string("rarity");
             $table->integer("max_sockets");
             $table->json("requirements");
             $table->integer("durability");

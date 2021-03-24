@@ -8,4 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Item extends Model
 {
     use HasFactory;
+
+    public $timestamps = false;
+
+    protected $fillable = [
+        "name",
+        "type",
+        "rarity",
+        "max_sockets",
+        "requirements",
+        "durability",
+        "stats",
+        "set_bonuses",
+        "quantity",
+        "price",
+    ];
 }

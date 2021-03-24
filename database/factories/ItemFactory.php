@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Stats;
+use App\Models\Item;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class StatsFactory extends Factory
+class ItemFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Stats::class;
+    protected $model = Item::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +22,7 @@ class StatsFactory extends Factory
     public function definition()
     {
         return [
-            //
-        ];
+                //
+            ];
     }
 }

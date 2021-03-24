@@ -1,8 +1,28 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
 // Variables
-@import 'variables';
+@import "variables";
+
+// Fonts
+@font-face {
+  font-family: $font-family;
+  src: url("/fonts/exocet.ttf");
+}
+
+#app {
+  height: 100vh;
+  background: $site-background;
+  font-family: $font-family;
+}
+
+#navbar {
+  .logo {
+    height: 45px;
+    width: 40px;
+  }
+
+  .navbar-dark .navbar-nav .nav-link.active {
+    border-bottom: 1px solid white;
+  }
+}
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";

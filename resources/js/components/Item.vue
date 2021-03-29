@@ -33,10 +33,11 @@ export default {
       type: String,
       required: true,
     },
-    image_url: {
-      type: String,
+    ethereal: {
+      type: Boolean,
       required: true,
     },
+
     max_sockets: {
       type: Number,
       required: false,
@@ -63,6 +64,10 @@ export default {
     },
     price: {
       type: Number,
+      required: true,
+    },
+    image_url: {
+      type: String,
       required: true,
     },
   },

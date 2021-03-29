@@ -18,6 +18,7 @@ class CreateItemTable extends Migration
             $table->string("name");
             $table->string("type");
             $table->string("rarity");
+            $table->boolean("ethereal");
             $table->integer("max_sockets");
             $table->json("requirements");
             $table->integer("durability");
@@ -25,6 +26,7 @@ class CreateItemTable extends Migration
             $table->json("set_bonuses");
             $table->integer("quantity");
             $table->decimal("price");
+            $table->string("image_url");
         });
     }
 

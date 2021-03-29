@@ -4,16 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Item;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class ItemController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-
     public function all()
     {
         return Item::all();
@@ -38,6 +31,7 @@ class ItemController extends Controller
             "set_bonuses" => json_encode(request("set_bonuses")),
             "quantity" => request("quantity"),
             "price" => request("price"),
+            "image_url" => request("image_url"),
         ]);
     }
 
@@ -54,6 +48,7 @@ class ItemController extends Controller
             "set_bonuses" => json_encode(request("set_bonuses")),
             "quantity" => request("quantity"),
             "price" => request("price"),
+            "image_url" => request("image_url"),
         ]);
 
         return [

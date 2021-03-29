@@ -22,5 +22,6 @@ class Item extends Model
         "set_bonuses",
         "quantity",
         "price",
+        "image_url",
     ];
 }

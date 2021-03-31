@@ -15,8 +15,5 @@ export default {
     NavBar,
     ItemGallery,
   },
-  mounted() {
-    console.log("Component mounted.");
-  },
 };
 </script>

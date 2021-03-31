@@ -1,7 +1,8 @@
 <template>
   <div
-    @mouseover="hover = true"
-    @mouseleave="hover = false"
+    @mouseenter="showTooltip = true"
+    @mousemove="hoverFunc($event)"
+    @mouseleave="showTooltip = false"
     class="item-container"
   >
     <div class="item-name">{{ item.name }}</div>
@@ -10,7 +11,7 @@
     <div class="price">Price: ${{ item.price }}</div>
   </div>
   <ItemHover
-    v-if="hover"
+    v-show="showTooltip"
     :type="item.type"
     :rarity="item.rarity"
     :max_sockets="item.max_sockets"
@@ -31,7 +32,7 @@ export default {
   },
   data() {
     return {
-      hover: false,
+      showTooltip: false,
     };
   },
   props: {
@@ -43,6 +44,10 @@ export default {
   methods: {
     url: () => {
       return window.location.href;
+    },
+    hoverFunc(event) {
+      event.currentTarget.nextSibling.style.left = event.layerX + 30 + "px";
+      event.currentTarget.nextSibling.style.top = event.layerY + "px";
     },
   },
 };

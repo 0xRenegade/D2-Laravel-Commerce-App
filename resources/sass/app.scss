@@ -7,12 +7,23 @@
   src: url("/fonts/exocet.ttf");
 }
 
-#app {
-  height: 100vh;
+html {
   background: $site-background;
+}
+
+#app {
   font-family: $font-family;
+  background: $site-background;
   color: white;
-  overflow-y: hidden;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .home {
+    padding: 10% 0;
+  }
 
   hr {
     border: 1px solid grey;
@@ -53,6 +64,12 @@
       width: 450px;
       border-radius: 4px;
     }
+  }
+
+  .d2-header-image > img {
+    border-radius: 8px;
+    border: 1px solid grey;
+    margin-bottom: 12px;
   }
 }
 

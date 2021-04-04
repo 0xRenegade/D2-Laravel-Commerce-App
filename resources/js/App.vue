@@ -1,19 +1,16 @@
 <template>
   <div class="container-fluid">
     <NavBar />
-    <ItemGallery />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import NavBar from "./NavBar";
-import ItemGallery from "./ItemGallery";
-const baseUrl = window.location.href;
+import NavBar from "./Components/NavBar";
 
 export default {
   components: {
     NavBar,
-    ItemGallery,
   },
 };
 </script>

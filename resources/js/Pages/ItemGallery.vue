@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1 class="gallery-title">Item Gallery</h1>
+    <h1 class="site-title">Item Gallery</h1>
     <hr />
     <div class="row">
       <div
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import Item from "./Item";
+import Item from "../Components/Item";
 
 export default {
   components: {

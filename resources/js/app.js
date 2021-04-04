@@ -1,4 +1,11 @@
-import { createApp } from "vue";
-import App from "./components/App.vue";
 require("./preload");
-createApp(App).mount("#app");
+
+import { createApp } from "vue";
+import router from "./Router/router";
+import store from "./Store/index";
+import App from "./App.vue";
+
+const app = createApp(App);
+app.use(router);
+app.use(store);
+app.mount("#app");

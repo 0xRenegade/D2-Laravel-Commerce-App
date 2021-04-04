@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="/images/favicon.png">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <title>Diablo 2 Item Store</title>
+    <title>{{ env("APP_NAME") }}</title>
 
 
   </head>

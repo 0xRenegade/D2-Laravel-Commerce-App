@@ -43,11 +43,12 @@ export default {
   },
   methods: {
     url: () => {
-      return window.location.href;
+      const url = window.location.origin + "/";
+      return url;
     },
     hoverFunc(event) {
-      event.currentTarget.nextSibling.style.left = event.layerX + 30 + "px";
-      event.currentTarget.nextSibling.style.top = event.layerY + "px";
+      event.currentTarget.nextSibling.style.left = event.layerX - 200 + "px";
+      event.currentTarget.nextSibling.style.top = event.layerY + 20 + "px";
     },
   },
 };

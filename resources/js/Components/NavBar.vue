@@ -17,25 +17,25 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navBar__link navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <router-link class="nav-link" :to="{ name: 'home' }"
+                >Home</router-link
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Items</a>
+              <router-link class="nav-link" :to="{ name: 'items' }"
+                >Items</router-link
+              >
             </li>
           </ul>
           <ul class="navbar-nav ml-auto">
             <form class="d-flex">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
+              <router-link
+                class="btn btn-dark btn-login"
+                :to="{ name: 'login' }"
+                >Login</router-link
+              >
             </form>
           </ul>
         </div>
@@ -45,5 +45,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "NavBar",
+  components: {},
+  data() {
+    return {
+      show: false,
+    };
+  },
+};
 </script>

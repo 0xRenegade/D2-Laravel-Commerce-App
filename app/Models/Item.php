@@ -24,4 +24,10 @@ class Item extends Model
         "price",
         "image_url",
     ];
+
+    protected $casts = [
+        "requirements" => "array",
+        "stats" => "array",
+        "set_bonuses" => "array",
+    ];
 }

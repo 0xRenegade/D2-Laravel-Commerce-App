@@ -5,19 +5,30 @@
   src: url("/fonts/exocet.ttf");
 }
 
-#app {
-  height: 100vh;
+html {
   background: url("/images/bg.jpg");
+}
+
+#app {
   font-family: "Exocet";
+  background: url("/images/bg.jpg");
   color: white;
-  overflow-y: hidden;
+}
+
+#app a {
+  color: white;
+  text-decoration: none;
+}
+
+#app .home {
+  padding: 10% 0;
 }
 
 #app hr {
   border: 1px solid grey;
 }
 
-#app .gallery-title {
+#app .site-title {
   text-align: center;
 }
 
@@ -50,6 +61,26 @@
   pointer-events: none;
   text-align: center;
   width: 450px;
+  border-radius: 8px;
+}
+
+#app .d2-header-image > img {
+  border-radius: 8px;
+  border: 1px solid grey;
+  margin-bottom: 12px;
+}
+
+#app #login {
+  height: 85vh;
+}
+
+#app #login .login-wrapper > * {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#app #login .login-input[type=text] {
+  height: 40px;
   border-radius: 4px;
 }
 
@@ -60,6 +91,15 @@
 
 #navbar .navbar-dark .navbar-nav .nav-link.active {
   border-bottom: 1px solid white;
+}
+
+.btn-login {
+  background: transparent !important;
+  border: 1px solid grey !important;
+}
+
+.btn-login:hover {
+  border: 1px solid white !important;
 }
 
 /*!
